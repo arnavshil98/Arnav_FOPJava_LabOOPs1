@@ -8,13 +8,16 @@ public class HrmsPortal {
 	public static void main(String[] args) throws Exception {
 
 		StringBuffer str = new StringBuffer();
-
+/*
+ * (1:Technical, 2:Admin, 3:Human Resource, 4:Legal)
+ */
 		Employee emp = new Employee("arnav", "shil");
 		str.append(emp.getFirstName());
 		String lstName = emp.getLastName();
 		str.append(lstName.concat("@"));
 		Scanner sc = new Scanner(System.in);
-		System.out.println("please select departments");
+		System.out.println("please select departments:");
+		System.out.println("(1:Technical, 2:Admin, 3:Human Resource, 4:Legal)");
 		str.append(emp.dept(sc.nextInt()).concat(".greatlearning.com"));
 		
 		String fname = emp.getFirstName();
