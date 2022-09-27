@@ -5,6 +5,7 @@ import java.util.Random;
 public class Employee {
 
 	private String firstName;
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -14,38 +15,39 @@ public class Employee {
 	}
 
 	private String lastName;
+
 	public Employee(String fname, String lname) {
 		this.firstName = fname;
-		this.lastName  = lname;
+		this.lastName = lname;
 	}
-	
+
 	public String dept(int i) throws Exception {
 		String dept = null;
 		switch (i) {
-		case 1:{
+		case 1: {
 			dept = "Technical";
 			break;
 		}
-		case 2:{
+		case 2: {
 			dept = "Admin";
 			break;
 		}
-		case 3:{
+		case 3: {
 			dept = "Human Resource";
 			break;
 		}
-		case 4:{
+		case 4: {
 			dept = "Legal";
 			break;
 		}
-		default:{
+		default: {
 			throw new Exception("department invalid");
 		}
-			
+
 		}
 		return dept;
 	}
-	
+
 	public StringBuffer systemPassword() {
 		StringBuffer prefix = new StringBuffer();
 		for (int i = 0; i < 3; i++) {
